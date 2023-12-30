@@ -1,51 +1,1132 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Eatesaam</title>
-    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
-    <script src="./assets/js/main.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Muhammad Eatesaam</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
 </head>
-<body>
-    <script>
-        $(function () {
-            $(window).on('scroll', function () {
-                if ( $(window).scrollTop() > 10 ) {
-                    $('.navbar').addClass('active');
-                } else {
-                    $('.navbar').removeClass('active');
-                }
-            });
-        });
-    </script>
+
+<body id="top">
+
+	<script>
+		function downloadPDF() {
+			// Assuming the PDF file is in the same directory as this HTML file
+			const pdfFileName = 'Eatesaam_Resume.pdf';
+			
+			// Construct the file path
+			const filePath = window.location.href.replace(/\/[^/]*$/, '/' + pdfFileName);
+		
+			// Create a link element
+			const link = document.createElement('a');
+			
+			// Set the href attribute to the file path
+			link.href = filePath;
+			
+			// Set the download attribute to the desired file name
+			link.download = pdfFileName;
+		
+			// Append the link to the document
+			document.body.appendChild(link);
+		
+			// Trigger a click event on the link to start the download
+			link.click();
+		
+			// Remove the link from the document
+			document.body.removeChild(link);
+		}
+	</script>
+
+	<!-- header 
+   ================================================== -->
+   <header>   	
+   	<div class="row">
+
+   		<div class="top-bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>
+
+	   		<div class="logo">
+		         <a href="index.html">𝓜𝓾𝓱𝓪𝓶𝓶𝓪𝓭 𝓔𝓪𝓽𝓮𝓼𝓪𝓪𝓶</a>
+		      </div>		      
+
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
+						<li><a class="smoothscroll"  href="#services" title="">Services</a></li>
+						<li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
+						<li><a class="smoothscroll"  href="#portfolio" title="">Portfolio</a></li>					
+						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>	
+						<!-- <li><a href="styles.html" title="">Style Demo</a></li>				 -->
+					</ul>
+				</nav>    		
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 		
+   </header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
+
+   	<div class="intro-overlay"></div>	
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+	   			<h5>Hello, World.</h5>
+	   			<h1>I'm Muhammad Eatesaam.</h1>
+
+	   			<p class="intro-position">
+	   				<span>Data Engineer</span>
+	   				<!-- <span>UI/UX Designer</span>  -->
+	   			</p>
+
+	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content --> 
+
+   	<ul class="intro-social">        
+         <li><a href="https://www.linkedin.com/in/eatesaam"><i class="fa fa-linkedin"></i></a></li>
+         <li><a href="https://github.com/eatesaam"><i class="fa fa-github"></i></a></li>
+         <li><a href="https://wa.link/uvtap0"><i class="fa fa-whatsapp"></i></a></li>
+         <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+         <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+      </ul> <!-- /intro-social -->      	
+
+   </section> <!-- /intro -->
+
+
+   <!-- about section
+   ================================================== -->
+   <section id="about">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>About</h5>
+   			<h1>Let me introduce myself.</h1>
+
+   			<div class="intro-info">
+
+   				<img src="images/profile_pic.jpg" alt="Profile Picture">
+
+   				<p class="lead">Experienced and results-driven Data Engineer with a four-year track record in the field. Proficient in Python, SQL, and Tableau, adept at cleaning, transforming, and wrangling large datasets. Skilled in data visualization and experienced in working with data lakes, warehouses, ETL/ELT processes, and building robust pipelines. Familiar with Airflow and AWS for workflow orchestration and cloud-based solutions. Passionate about leveraging analytics to drive impactful business decisions. Strong background in data analytics, emphasizing scalable infrastructure solutions and a commitment to optimizing pipelines for enhanced data quality and meaningful insights, ultimately contributing to business growth.</p>
+   			</div>   			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+<!-- 
+   	<div class="row about-content">
+
+   		<div class="col-six tab-full">
+
+   			<h3>Profile</h3>
+   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
+
+   			<ul class="info-list">
+   				<li>
+   					<strong>Fullname:</strong>
+   					<span>Juan Dela Cruz</span>
+   				</li>
+   				<li>
+   					<strong>Birth Date:</strong>
+   					<span>September 28, 1987</span>
+   				</li>
+   				<li>
+   					<strong>Job:</strong>
+   					<span>Freelancer, Frontend Developer</span>
+   				</li>
+   				<li>
+   					<strong>Website:</strong>
+   					<span>www.kardswebsite.com</span>
+   				</li>
+   				<li>
+   					<strong>Email:</strong>
+   					<span>me@kardswebsite.com</span>
+   				</li>
+
+   			</ul>
+
+   		</div>
+
+   		<div class="col-six tab-full">
+
+   			<h3>Skills</h3>
+   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
+
+				<ul class="skill-bars">
+				   <li>
+				   	<div class="progress percent90"><span>90%</span></div>
+				   	<strong>HTML5</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent85"><span>85%</span></div>
+				   	<strong>CSS3</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent70"><span>70%</span></div>
+				   	<strong>JQuery</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent95"><span>95%</span></div>
+				   	<strong>PHP</strong>
+				   </li>
+				   <li>
+
+				   	<div class="progress percent75"><span>75%</span></div>
+				   	<strong>Wordpress</strong>
+				   </li>
+      
+				</ul>	
+
+   		</div>
+
+   	</div> -->
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="#contact" title="Contact Me" class="button stroke smoothscroll">Contact Me</a>
+   			<a href="#" onclick="downloadPDF()" title="Download CV" class="button button-primary">Download CV</a>
+   		</div>   		
+   	</div>
+
+   </section> <!-- /process-->    
+
+
    
-    <!-- Navbar-->
-    <header class="header">
-        <nav class="navbar navbar-expand-lg fixed-top py-3">
-            <div class="container"><img src="./assets/images/logo.png" class="logo img-fluid navbar-brand text-uppercase font-weight-bold" />
-                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
-                
-                <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold">Home <span class="sr-only">(current)</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Service</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Portfolio</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+	<!-- services Section
+   ================================================== -->
+	<section id="services">
+
+		<div class="overlay"></div>
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Services</h5>
+   			<h1>What Can I Do For You?</h1>
+
+   			<p class="lead">Elevate your data capabilities with tailored data engineering services, leveraging advanced ETL processes, cloud technologies, and insightful analytics for impactful business solutions.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row services-content">
+
+   		<div id="owl-slider" class="owl-carousel services-list">
+
+	      	<div class="service">	
+
+	      		<span class="icon"><i class="fa fa-desktop"></i></span>            
+
+	            <div class="service-content">	
+
+	            	 <h3>Data Engineering</h3>
+
+		            <p class="desc">Unlock the power of your data with my specialized Data Engineering services, where I design and implement robust ETL processes and optimize data pipelines for insightful analytics. From cloud integration to efficient data management, I bring expertise in Python, SQL, and cutting-edge technologies to drive meaningful business outcomes.
+	         		</p>
+	         		
+	         	</div> 	         	 
+
+				</div> <!-- /service -->
+
+				<div class="service">	
+
+					<span class="icon"><i class="fa fa-line-chart"></i></span>                          
+
+	            <div class="service-content">	
+
+	            	<h3>Data Analytics</h3>  
+
+		            <p class="desc">Transforming raw data into actionable insights, my Data Analytics services empower informed decision-making through advanced statistical analysis and visualization techniques. Harness the potential of your data to drive strategic business outcomes with my expertise in Python, R, and data visualization tools.
+	         		</p>
+
+	            </div>	                          
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="fa fa-database"></i></span>		            
+
+	            <div class="service-content">
+
+	            	<h3>Data Modeling</h3>
+
+		            <p class="desc">Elevate your data strategy with precision-crafted Data Modeling services, optimizing database structures for efficiency and scalability. I specialize in designing and implementing robust data models, ensuring a solid foundation for your organization's data architecture and analytics initiatives.
+	        		</p> 
+
+	            </div> 	            	               
+
+			   </div> <!-- /service -->
+
+				<div class="service">
+
+					<span class="icon"><i class="fa fa-cubes"></i></span>	              
+
+	            <div class="service-content">
+
+	            	<h3>Data Management</h3>
+
+		            <p class="desc">Streamline your data ecosystem with my Data Management services, offering expertise in organizing, validating, and maintaining data integrity. From database administration to data governance, I ensure your data assets are optimized for efficiency and reliability.
+	         		</p> 
+	         		
+	            </div>                
+
+				</div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="fa fa-cloud"></i></span>	            
+
+	            <div class="service-content">
+
+	            	<h3>Cloud Solutions</h3>
+
+		            <p class="desc">Empower your business with Cloud Solutions tailored to optimize scalability, security, and performance. Leveraging my expertise in AWS, I design and implement cloud architectures that drive seamless integration and efficiency in your digital operations.
+	        		</p> 
+
+	            </div>	               
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-chat"></i></span>	   	           
+
+	            <div class="service-content">
+
+	            	 <h3>Consultancy</h3>
+
+		            <p class="desc">Navigate complex data challenges with my Consultancy services, offering strategic insights and tailored solutions to optimize your data infrastructure. From project planning to implementation, I bring expertise in data engineering and analytics to drive impactful outcomes for your business.
+	        		</p> 
+	        			
+	            </div>	               
+
+			   </div> <!-- /service -->
+
+	      </div> <!-- /services-list -->
+   		
+   	</div> <!-- /services-content -->
+		
+	</section> <!-- /services -->	
+
+   <!-- resume Section
+   ================================================== -->
+	<section id="resume" class="grey-section">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Resume</h5>
+   			<h1>More of my credentials.</h1>
+
+   			<p class="lead">Contributed to impactful data engineering projects, implementing robust ETL processes and managing data pipelines for optimal efficiency. Leveraged expertise in Python, SQL, and cloud platforms to drive insightful analytics and enhance organizational data infrastructure.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+	   <div class="row resume-timeline">
+
+		<div class="col-twelve resume-header">
+
+			<h2>Skills</h2>
+
+		</div> <!-- /resume-header -->
+
+		<div class="col-twelve">
+
+			<div class="timeline-wrap">
+
+				<div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-wrench"></i>
+					</div>
+
+					<!-- <div class="timeline-header">
+						<h3>Data Engineer</h3>
+						<p>April 2023 - Present</p>
+					</div> -->
+
+					<div class="timeline-content">
+						<h4>Programming Languages</h4>
+						<p>Python, SQL, JavaScript ES</p>
+					</div>
+
+				</div> <!-- /timeline-block -->
+
+				<div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-wrench"></i>
+					</div>
+
+					<!-- <div class="timeline-header">
+						<h3>Data Engineer</h3>
+						<p>April 2021 - April 2023</p>
+					</div> -->
+
+					<div class="timeline-content">
+						<h4>Libraries</h4>
+						<p>Numpy, Pandas, Pyspark, Matplotlib, Plotly, Seaborn, Beautiful Soup, Boto3</p>
+					</div>
+
+				</div> <!-- /timeline-block -->
+
+				<div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-wrench"></i>
+					</div>
+
+					<!-- <div class="timeline-header">
+						<h3>Software Engineer</h3>
+						<p>September 2019 - March 2021</p>
+					</div> -->
+
+					<div class="timeline-content">
+						<h4>Tools</h4>
+						<p>Git, Docker, Apache Airflow, Tableau, MS Office Suite</p>
+					</div>
+
+				</div> <!-- /timeline-block -->
+
+				<div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-wrench"></i>
+					</div>
+
+					<!-- <div class="timeline-header">
+						<h3>Software Engineer</h3>
+						<p>September 2019 - March 2021</p>
+					</div> -->
+
+					<div class="timeline-content">
+						<h4>Databases</h4>
+						<p>PostgreSQL, MySQL, DynamoDb, Amazon RDS, Apache Cassandra</p>
+					</div>
+
+				</div> <!-- /timeline-block -->
+
+				<div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-wrench"></i>
+					</div>
+
+					<!-- <div class="timeline-header">
+						<h3>Software Engineer</h3>
+						<p>September 2019 - March 2021</p>
+					</div> -->
+
+					<div class="timeline-content">
+						<h4>Platforms</h4>
+						<p>Amazon Web Services (AWS)</p>
+					</div>
+
+				</div> <!-- /timeline-block -->
+
+				<div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-wrench"></i>
+					</div>
+
+					<!-- <div class="timeline-header">
+						<h3>Software Engineer</h3>
+						<p>September 2019 - March 2021</p>
+					</div> -->
+
+					<div class="timeline-content">
+						<h4>Others</h4>
+						<p>ETL/ELT, Data Pipelines, Data Profiling, Data Cleaning, Aggregation, Wrangling, Relational and Non-Relational Databases (SQL, NoSQL), Data Warehousing, Data Lakes, Dashboard and Reporting, Business Intelligence, Solution Design, Iterative Development, Documentation, Serverless Application (AWS Lambda, API Gateway), CI/CD, Scraping, Data Governance, Query Optimization, Web Crawling, Unstructured Data, API Development</p>
+					</div>
+
+				</div> <!-- /timeline-block -->
+
+			</div> <!-- /timeline-wrap -->   			
+
+		</div> <!-- /col-twelve -->
+		
+	</div> <!-- /resume-timeline -->
+
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Work Experience</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Data Engineer</h3>
+	   					<p>April 2023 - Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Freelance</h4>
+	   					<p>As a skilled Data Engineer, my role involves designing and implementing robust ETL and ELT processes, managing efficient data pipelines, and leveraging cloud platforms like AWS. Proficient in Python and SQL, I conduct data cleansing, aggregation, and transformation from both relational and non-relational databases. Additionally, I specialize in constructing serverless APIs, developing small-scale serverless data applications, and deriving actionable insights for comprehensive reporting and dashboards. Documentation is a priority to ensure project clarity, and I actively collaborate with leadership to implement data-driven solutions aligning with organizational goals. I take ownership of managing data across diverse storage systems, designing CI/CD pipelines in GitLab, and containerizing applications using Docker. Overall, my focus is on optimizing data processes, ensuring data quality, and contributing to the success of data-driven initiatives within the organization.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Data Engineer</h3>
+	   					<p>April 2021 - April 2023</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Starkey Technologies</h4>
+	   					<p>I specialize in the design and implementation of robust data infrastructure, having successfully developed ETL (Extract, Transform, Load) and ELT (Extract, Load, Transform) processes, along with data pipelines. A key aspect of my role involves creating and maintaining AWS Lambda functions for efficient data computation. In Airflow, I have constructed ETL, ELT, and Data pipelines, while also implementing workflow orchestration through AWS Step Functions. My expertise extends to applying data cleansing, aggregation, and transformation using Python or SQL, and querying data from both relational and non-relational databases. Additionally, I have built serverless APIs in AWS API Gateway, as well as small-scale serverless data applications in SAM. Leveraging insights derived from data, I have created impactful reporting and dashboards, contributing to informed decision-making. Furthermore, I focus on maintaining clear and concise documentation for all projects, and through collaboration with leadership and colleagues, I implement data-driven solutions. I actively manage organizational data across databases, data warehouses, and data lakes, and have experience designing and building CI/CD pipelines in GitLab, as well as containerizing applications in Docker.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Software Engineer</h3>
+	   					<p>September 2019 - March 2021</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>The Superior Group</h4>
+	   					<p>I played a crucial role in fostering collaborative development by facilitating co-developers in generating innovative code. Additionally, I designed and implemented custom web pages for existing websites using HTML and JavaScript, creating intuitive user interfaces with modern frameworks like JavaScript, HTML5, and CSS3. My responsibilities extended to web scraping from various sites and utilizing the extracted data to build comprehensive business reports. I actively queried data from databases, managing and governing organizational data for multiple team members. Engaging in tasks such as data aggregation, transformation, and manipulation, I ensured the effective handling of business data. Furthermore, I conducted data profiling and validation tasks using MS Excel, contributing to a thorough understanding and maintenance of data integrity within the organization.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+   	
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Education</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Bachelor Degree</h3>
+	   					<p>September 2015 - September 2019</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Superior University</h4>
+	   					<p>Bachelor of Science (BS) in Software Engineering</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>High School</h3>
+	   					<p>April 2013 - April 2015</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>BISE Lahore</h4>
+	   					<p>Intermediate in Pre Engineering</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Secondary School</h3>
+	   					<p>March 2011 - March 2013</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>BISE Lahore</h4>
+	   					<p>Matriculation in Science</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+		
+	</section> <!-- /features -->
+
+
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Portfolio</h5>
+   			<h1>Check Out Some of My Works.</h1>
+
+   			<p class="lead">Explore my portfolio showcasing innovative data engineering projects, where I leverage advanced ETL processes, cloud technologies, and insightful data visualizations to drive impactful results. Dive into a collection of projects demonstrating my expertise in optimizing data pipelines and building scalable solutions for diverse business needs.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-twelve">
+
+   			<!-- portfolio-wrapper -->
+	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap">
+						<div class="port">
+							<h4>Safe Metrics Dashboard</h4>
+							<p>Elevated the effectiveness of a critical JIRA issue tracking dashboard through meticulous analysis, innovative design, and seamless implementation of a new chart and report. This transformative project was driven by a commitment to enrich stakeholders' comprehension of JIRA data, introducing vital metrics and visualizations to enhance decision-making and project oversight.</p>
+						</div>
+	               	<!-- <img src="images/portfolio/liberty.jpg" alt="Liberty"> -->
+	                  <a href="#modal-01" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">Skills</h3>	     					    
+		     					    	 <span class="folio-types">
+											Data Modeling, Data Analysis, Data Visualization, AWS, SQL, Python, PostgreSQL, Data Engineering
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+					<div class="port">
+						<h4>P’s E</h4>
+						<p>Championed pivotal roles in ETL processes, orchestrating the extraction, transformation, and loading of diverse data sources into a refined target system. Prioritized the seamless and precise movement of data, upholding unwavering standards of integrity and quality. Navigated through intricate, unstructured data landscapes, skillfully transforming chaos into structured, actionable insights.</p>
+					</div>
+	               	<!-- <img src="images/portfolio/shutterbug.jpg" alt="Shutterbug"> -->
+	               	<a href="#modal-02" class="overlay">              		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Skills</h3>	     					    
+		     					    	<span class="folio-types">
+											Data Aggregation, Data Wrangling, Data Transformation, Data Cleaning, AWS, Data Warehousing, SQL Database, SQL, Python, MySQL, Pandas, NumPy, Data Engineering, ETL, AWS Lambda, Amazon S3, RDS, AWS Step Functions
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+					<div class="port">
+						<h4>DE Cap</h4>
+						<p>Architected a robust data platform, strategically employing MySQL as the OLTP database for transactional data and MongoDB for dynamic e-commerce catalog information. Pioneered the establishment of a sophisticated data warehouse and seamlessly integrated a comprehensive reporting dashboard. Engineered Python scripts to orchestrate diverse ETL operations, seamlessly transferring data between RDBMS, NoSQL, and the data warehouse. Harnessed the potential of web server log data for in-depth analysis and precision-driven sales forecasting, optimizing the platform for data-driven decision-making.</p>
+					</div>
+	               	<!-- <img src="images/portfolio/clouds.jpg"alt="Clouds"> -->
+	                  <a href="#modal-03" class="overlay">             		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Skills</h3>	     					    
+		     					    	<span class="folio-types">
+											Data Pipelines, Reporting, NoSQL, Dashboards, Big Data, Big Data Analytics, Tableau, Data Modeling, Data Analytics, Data Analysis, Apache Airflow, Data Warehousing, SQL, Python, MySQL, PySpark, ETL
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+	            <div class="bgrid folio-item">
+	               <div class="item-wrap">
+					<div class="port">
+						<h4>VG Sales Data Pipeline</h4>
+						<p>Engineered a dynamic data pipeline, meticulously designed for the intricate dance of extracting, transforming, and loading data into a high-impact target system. Unleashed the power of data through strategic emphasis on crafting derived datasets, leveraging advanced grouping and aggregation techniques. This transformative approach not only streamlined ETL processes but also empowered the generation of insightful, refined datasets, amplifying the platform's capability for sophisticated analytics and informed decision-making.</p>
+					</div>
+	               	<!-- <img src="images/portfolio/beetle.jpg" alt="Beetle"> -->
+	                  <a href="#modal-04" class="overlay">                  	                 
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Skills</h3>	     					    
+		     					    	<span class="folio-types">
+											Data Pipelines, Data Transformation, Apache Airflow, Python, Pandas, ETL
+		     					      </span>		     		
+		     					   </div>  	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->        
+
+	            <!-- modal popups - begin
+	            ============================================================= -->
+	               <!-- <div id="modal-01" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-liberty.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Liberty</h4>		      
+					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+					      <div class="categories">Web Development</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="http://www.behance.net">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div>  /modal-01 
+
+				   <div id="modal-02" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-shutterbug.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Shutterbug</h4>		      
+					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+					      <div class="categories">Web Design</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="http://www.behance.net">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> /modal-02 
+
+				   <div id="modal-03" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-clouds.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Clouds</h4>		      
+					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+					      <div class="categories">Web Design</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="http://www.behance.net">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div>  /modal-03
+
+				   <div id="modal-04" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-beetle.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Beetle</h4>		      
+					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+					      <div class="categories">Branding</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="http://www.behance.net">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> /modal-04 -->
+
+
+				   <!-- modal popups - end
+	            ============================================================= -->
+
+	         </div> <!-- /portfolio-wrapper --> 
+
+   		</div>  <!-- /twelve -->   
+
+   	</div> <!-- /portfolio-content --> 
+		
+	</section> <!-- /portfolio --> 
+
+
+	<!-- Honors & awards
+   ================================================== -->
+	<section id="cta" class="grey-section">
+
+   	<div class="row cta-content">
+
+   		<div class="col-twelve section-ads">  
+
+	     		<h2 class="h01">Honors & Awards</h2>
+				 <div class="icon-part">
+					<i class="icon-badge" style="font-size: 3rem;">Shahbaz Sharif E-Youth Initiative 2014</i>
+				</div>
+		      <p class="lead">
+		      
+			  <br>Endowed by the Government of Punjab in November 2014, I proudly received a secure and complimentary laptop through the esteemed Shahbaz Sharif E-Youth Initiative. This accolade, bestowed in recognition of outstanding academic performance, stands as a tangible testament to my unwavering dedication and commitment to excellence.
+
+			  <!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->	
+				</p>
+
+				<!-- <div class="action">
+			      <a class="button button-primary large" href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Sign Up Now</a>
+		      </div>		     	 -->
+
+   		</div>
+
+   	</div> <!-- /cta-content -->
+
+   </section> <!-- /Honors & awards --> 
 
 
 
+	<!-- stats Section
+   ================================================== -->
+	<!-- <section id="stats" class="count-up">
+
+		<div class="row">
+			<div class="col-twelve">
+
+				<div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-pencil-ruler"></i>
+						</div>
+
+						<h3 class="stat-count">
+							1500
+						</h3>
+
+						<h5 class="stat-title">
+							Projects Completed
+						</h5>
+
+					</div> 					
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-users"></i>
+						</div>
+
+						<h3 class="stat-count">
+							900
+						</h3>
+
+						<h5 class="stat-title">
+							Happy Clients
+						</h5>
+
+					</div> 
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-badge"></i>
+						</div>
+
+						<h3 class="stat-count">
+							200
+						</h3>
+
+						<h5 class="stat-title">
+							Awards Received
+						</h5>
+
+					</div> 									
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-light-bulb"></i>
+						</div>
+
+						<h3 class="stat-count">
+							120
+						</h3>
+
+						<h5 class="stat-title">
+							Crazy Ideas
+						</h5>
+
+					</div> 
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-cup"></i>
+						</div>
+
+						<h3 class="stat-count">
+							1500
+						</h3>
+
+						<h5 class="stat-title">
+							Coffee Cups
+						</h5>
+
+					</div> 
+
+					<div class="bgrid stat">
+
+						<div class="icon-part">
+							<i class="icon-clock"></i>
+						</div>
+
+						<h3 class="stat-count">
+							7200
+						</h3>
+
+						<h5 class="stat-title">
+							Hours
+						</h5>
+
+					</div> 
+
+				</div> 
+
+			</div> 
+		</div>
+
+	</section> /stats -->
+
+	
+   <!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Contact</h5>
+   			<h1>I'd Love To Hear From You.</h1>
+
+   			<p class="lead">Feel free to reach out for collaborative opportunities or inquiries related to data engineering and analytics. I'm excited to connect and explore how we can work together to drive meaningful insights from data.</p>
+
+   		</div> 
+   	</div> <!-- /section-intro -->
+
+   	<div class="row contact-form">
+
+   		<div class="col-twelve">
+
+            <!-- form -->
+            <form name="contactForm" id="contactForm" method="post" action="">
+      			<fieldset>
+
+                  <div class="form-field">
+ 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+                  </div>
+                  <div class="form-field">
+	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+	               </div>
+                  <div class="form-field">
+	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+	               </div>                       
+                  <div class="form-field">
+	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+	               </div>                      
+                 <div class="form-field">
+                     <button class="submitform">Submit</button>
+                     <div id="submit-loader">
+                        <div class="text-loader">Sending...</div>                             
+       				      <div class="s-loader">
+								  	<div class="bounce1"></div>
+								  	<div class="bounce2"></div>
+								  	<div class="bounce3"></div>
+								</div>
+							</div>
+                  </div>
+
+      			</fieldset>
+      		</form> <!-- Form End -->
+
+            <!-- contact-warning -->
+            <div id="message-warning">            	
+            </div>            
+            <!-- contact-success -->
+      		<div id="message-success">
+               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+      		</div>
+
+         </div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /contact-form -->
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-pin"></i>
+   			</div>
+
+   			<h5>Where to find me</h5>
+
+   			<p>Lahore, Punjab, Pakistan</p>
+
+   		</div>
+
+   		<div class="col-four tab-full collapse">
+
+   			<div class="icon">
+   				<i class="icon-mail"></i>
+   			</div>
+
+   			<h5>Email Me At</h5>
+
+   			<p>eatesaam@gmail.com<br>
+			   	<!-- info@kardswebsite.com			      -->
+			   </p>
+
+   		</div>
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-phone"></i>
+   			</div>
+
+   			<h5>Call Me At</h5>
+
+   			<p>
+				<!-- Phone: (+63) 555 1212<br> -->
+			   	Mobile: (+92) 303 0272127<br>
+			     	<!-- Fax: (+63) 555 0101 -->
+			   </p>
+
+   		</div>
+   		
+   	</div> <!-- /contact-info -->
+		
+	</section> <!-- /contact -->
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<!-- <div class="col-six tab-full pull-right social">
+
+     			<ul class="footer-social">        
+			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			      <li><a href="#"><i class="fa fa-behance"></i></a></li>
+			      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+			      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			   </ul> 
+	      		
+	      </div> -->
+
+      	<div class="col-eight tab-full">
+	      	<!-- <div class="copyright">
+		        	<span>© Copyright 2018 </span> 
+		        	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span> 
+		        	<span>Distributed by <a href="https://themewagon.com/">themewagon</a></span>	         	
+		         </div>		                  
+	      	</div> -->
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
 
 </body>
+
 </html>
